@@ -13,7 +13,12 @@ Este proyecto tiene como objetivo implementar diferentes versiones de un modelo 
 - Generar gráficos para evaluar el desempeño del modelo, como las curvas ROC y matrices de confusión.
 
 ## Intrucciones
+
 En cuanto a las dependencias necesarias y al método de uso, a grandes rangos se utiliza lenguaje python (junto con librerías) para tratar los datos y entrenar el modelo.
+
+### Tipo de input que utilizan los scripts
+
+Todos los scripts utilizan un archivo en formato TSV como input principal. Este archivo debe encontrarse dentro de la carpeta `/data` y corresponder al nombre del archivo especificado en cada script. El archivo contiene datos normalizados y procesados, organizados en columnas que agrupan características genómicas y clínicas relevantes para el modelo.
 
 ### Cómo crear un entorno virtual e instalar los requirements.txt (OS Debian)
 
