@@ -1,10 +1,10 @@
 # recursos-complementarios_RF-omics3
 
-##Breve contexto
+## Breve contexto
 
 Este proyecto tiene como objetivo implementar diferentes versiones de un modelo de Random Forest para la clasificación de tumores de origen desconocido, utilizando datos de mutaciones de nucleótido único (SNP) obtenidos del GDC Data Portal. Se incluyen enfoques para mejorar el rendimiento del modelo, tales como el balanceo de datos y la optimización de hiperparámetros, con el fin de lograr una mejor precisión en la identificación del sitio primario del tumor.
 
-##Objetivos de los códigos
+## Objetivos de los códigos
 
 - Entrenar y evaluar diferentes versiones del modelo Random Forest.
 
@@ -12,10 +12,10 @@ Este proyecto tiene como objetivo implementar diferentes versiones de un modelo 
 
 - Generar gráficos para evaluar el desempeño del modelo, como las curvas ROC y matrices de confusión.
 
-##Intrucciones
+## Intrucciones
 En cuanto a las dependencias necesarias y al método de uso, a grandes rangos se utiliza lenguaje python (junto con librerías) para tratar los datos y entrenar el modelo.
 
-###Cómo crear un entorno virtual e instalar los requirements.txt (OS Debian)
+### Cómo crear un entorno virtual e instalar los requirements.txt (OS Debian)
 
 1.- Crear un entorno virtual:
 ```bash
@@ -32,7 +32,7 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-###Cómo utilizar los códigos
+### Cómo utilizar los códigos
 
 1.- Activa el entorno virtual antes de ejecutar cualquier script, para asegurarte de que todas las dependencias estén disponibles.
 
@@ -41,9 +41,9 @@ pip install -r requirements.txt
 python cross_val-random_forest.py
 ```
 
-##Qué hace cada código
+## Qué hace cada código
 
-- `cross_val-random_forest.py`: Genera y entrena un modelo Random Forest con los hiperparámetros y datos por defecto.
+- `cross_val-random_forest.py`: Genera y entrena un modelo Random Forest con los hiperparámetros por defecto y sin balanceo en los casos.
 
 - `cross_val-random_forest-optuna.py`: Genera y entrena un modelo Random Forest utilizando datos desbalanceados, pero optimizando los hiperparámetros mediante Optuna para mejorar el rendimiento.
 
@@ -53,5 +53,5 @@ python cross_val-random_forest.py
 
 - `cross_val-random_forest-SMOTE-Optuna-grafs.py`: Similar al anterior, pero además genera gráficos de ROC y matrices de confusión para evaluar el desempeño del modelo.
 
-- `CutData.py`: Este script se encuentra dentro de la carpeta /data y se utiliza para reducir el número de ejemplos de cada clase, balanceando las características mediante la eliminación de datos. Si se desea utilizar un conjunto de datos reducido, basta con cambiar el archivo de datos que llama cada script por el nuevo archivo con datos recortados.
+- `CutData.py`: Este script se encuentra dentro de la carpeta `/data` y se utiliza para reducir el número de ejemplos de cada clase, balanceando las características mediante la eliminación de datos (undersampling). Si se desea utilizar un conjunto de datos reducido, basta con cambiar el archivo de datos que llama cada script por el nuevo archivo con datos recortados.
 
